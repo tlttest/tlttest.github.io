@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>T E C H I E</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/assets/favicon/favicon-PROD.ico" type="image/x-icon">
+  
+
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/css/main.css?1487008561299">
+  <!-- endinject -->
+</head>
+<body>
+
+  <sd-app>Loading...</sd-app>
+
+  <script>
+  // Fixes undefined module function in SystemJS bundle
+  function module() {}
+  </script>
+
+  <!-- shims:js -->
+  <!-- endinject -->
+
+  
+
+  <!-- libs:js -->
+  <!-- endinject -->
+
+  <!-- inject:js -->
+  <script src="/js/shims.js?1487008561295"></script>
+  <script src="/js/app.js?1487008561299"></script>
+  <!-- endinject -->
+
+  
+
+  <script>
+    (function() {
+      window.addEventListener('scroll', function(event) {
+        var depth, i, layer, layers, len, movement, topDistance, translate3d;
+        topDistance = this.pageYOffset;
+        layers = document.querySelectorAll("[data-type='parallax']");
+        for (i = 0, len = layers.length; i < len; i++) {
+          layer = layers[i];
+          depth = layer.getAttribute('data-depth');
+          movement = -(topDistance * depth);
+          translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+          layer.style['-webkit-transform'] = translate3d;
+          layer.style['-moz-transform'] = translate3d;
+          layer.style['-ms-transform'] = translate3d;
+          layer.style['-o-transform'] = translate3d;
+          layer.style.transform = translate3d;
+        }
+      });
+    }).call(this);
+  </script>
+
+</body>
+</html>
