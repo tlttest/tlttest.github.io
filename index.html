@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html ng-app="app">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>T E C H I E</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <link rel="icon" href="img/favicon.png" />
+  <link media="all" type="text/css" rel="stylesheet" href="css/app.min.css" />
+
+  <!-- Google Analytics -->
+  <script>
+  //<![CDATA[
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-54264896-1', 'auto');
+    ga('send', 'pageview');
+  //]]>
+  </script>
+</head>
+
+<body ng-controller="CommonCtrl">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle pull-left" ng-click="isNavCollapsed = !isNavCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" ui-sref="home"><img src='./img/tlt-header.png' /></a>
+		</div>
+		<div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
+			<ul class="nav navbar-nav" ng-click="isNavCollapsed = false">
+			  <li><a href='http://blog.thelittletechie.com'><i class='fa fa-code fa-fw'></i> Blog</a></li>
+        <li><a ui-sref="about" ng-click="reload()"><i class='fa fa-user fa-fw'></i> About</a></li>
+        <li><a href="http://blog.thelittletechie.com/p/cv.html#tlt"><i class='fa fa-file-text fa-fw'></i> Resume</a></li>
+        <li><a href="http://blog.thelittletechie.com/p/portfolio.html#tlt" ng-click="reload()"><i class='fa fa-archive fa-fw'></i> Portfolio</a></li>
+        <li><a ui-sref="contact" ng-click="reload()"><i class='fa fa-envelope fa-fw'></i> Contact</a></li>
+			</ul>
+      <ul class="nav navbar-nav pull-right navbar-social">
+			  <li><a href='https://twitter.com/vivinantony'><i class='fa fa-twitter fa-fw'></i></a></li>
+        <li><a href="https://www.facebook.com/TheLittleTechie"><i class='fa fa-facebook fa-fw'></i></a></li>
+        <li><a href="https://plus.google.com/104070651474939118104"><i class='fa fa-google-plus fa-fw'></i></a></li>
+        <li><a href="https://www.linkedin.com/in/vivinantony"><i class='fa fa-linkedin fa-fw'></i></a></li>
+        <li><a href="http://codepen.io/vivinantony/"><i class='fa fa-codepen fa-fw'></i></a></li>
+			</ul>
+		</div>
+	</nav>
+
+  <div>
+    <a class='chev-up' ng-click="scrollTo('home')"><i class='fa fa-chevron-circle-up fa-2x'></i></a>
+    <a class='chev-down' ng-click="scrollTo('tlt')"><i class='fa fa-chevron-circle-down fa-2x'></i></a>
+  </div>
+
+  <div class="viewport" data-0="transform:translate3d(0,0px,0)">
+
+    <div class="parallax scenic" id="home">
+      <div class="layers" data-parallax-strength="0.6">
+        <div data-src="img/tlt-parallax-bg-2.jpg" class="layer" data-y="-23" data-parallax="0.75" data-required="true">
+        </div>
+        <div data-src="img/logo.png" class="layer" data-x="250" data-y="183" data-parallax="0.25" data-required="true">
+        </div>
+        <div data-src="img/tlt-parallax-bg-1.png" class="layer" data-x="0" data-y="0" data-parallax="1" data-required="true">
+        </div>
+      </div>
+      <div class="tlt-mobile-cover"></div>
+    </div>
+
+    <div id="tlt" style="height: 50px"></div>
+    <div class="container">
+      <div ui-view></div>
+       <footer>
+        <p>                
+          <a href='https://twitter.com/vivinantony'>
+            <span class='fa-stack fa-2x'>
+              <i class='fa fa-circle fa-stack-2x social-twitter'></i>
+              <i class='fa fa-twitter fa-stack-1x social-icons'></i>
+            </span>
+          </a>
+          <a href='https://www.facebook.com/TheLittleTechie'>
+            <span class='fa-stack fa-2x'>
+              <i class='fa fa-circle fa-stack-2x social-facebook'></i>
+              <i class='fa fa-facebook fa-stack-1x social-icons'></i>
+            </span>
+          </a>
+          <a href='https://plus.google.com/104070651474939118104' rel='publisher'>
+            <span class='fa-stack fa-2x'>
+              <i class='fa fa-circle fa-stack-2x social-googleplus'></i>
+              <i class='fa fa-google-plus fa-stack-1x social-icons'></i>
+            </span>
+          </a>        
+          <a href='https://www.linkedin.com/in/vivinantony'>
+            <span class='fa-stack fa-2x'>
+              <i class='fa fa-circle fa-stack-2x social-linkedin'></i>
+              <i class='fa fa-linkedin fa-stack-1x social-icons'></i>
+            </span>
+          </a>
+          <a href='http://codepen.io/vivinantony/'>
+            <span class='fa-stack fa-2x'>
+              <i class='fa fa-circle fa-stack-2x social-codepen'></i>
+              <i class='fa fa-codepen fa-stack-1x social-icons'></i>
+            </span>
+          </a>
+        </p>
+        <p>
+          <i class='fa fa-copyright'></i> Copyright 2013-2017<br />
+          Designed and built by <a href='https://twitter.com/vivinantony'>@Vivin</a> with all the <i class='fa fa-heart'></i> in the world.</i>
+        </p>
+        <p>
+          <a ui-sref='apps' ng-click="reload()">Apps</a> &#8226; <a href="http://blog.thelittletechie.com/p/privacy-policy.html#tlt">Privacy</a> &#8226; <a href="http://blog.thelittletechie.com/p/copyright-policy.html#tlt">Copyright</a>
+        </p>
+      </footer>
+    </div>
+
+  </div>
+
+  <div class="cover"></div>
+  <div class="preloader-container">
+    <div class="preloader">
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+      <div class="preloader-ball"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
