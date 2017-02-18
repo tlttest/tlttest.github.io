@@ -58123,14 +58123,11 @@ app.controller('CommonCtrl', ['$scope', '$state', '$timeout', '$anchorScroll', '
     }, 1000);
   };
 
-   $scope.reload = function(el) {
-    console.log(el);
-    if(el == "about") {
-      $location.path('/about');
-       window.location.reload();
-    } else if (el == "home") {
-      $location.path('/')      
-    }
+  $scope.reload = function(el) {
+    $state.go(el);
+    $timeout(function() {
+      window.location.reload();
+    }, 1000);
   };
 
   // $scope.reload = function() {
