@@ -38,13 +38,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="http://tlttest.github.io"><img src='./img/tlt-header.png' /></a>
+			<a class="navbar-brand" ui-sref="home"><img src='./img/tlt-header.png' /></a>
 		</div>
 		<div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
 			<ul class="nav navbar-nav" ng-click="isNavCollapsed = false">
 			  <li><a href='http://blog.thelittletechie.com'><i class='fa fa-code fa-fw'></i> Blog</a></li>
-        <li><a href="http://about.thelittletechie.com"><i class='fa fa-user fa-fw'></i> About</a></li>
-        <li><a href="http://cv.thelittletechie.com"><i class='fa fa-file-text fa-fw'></i> Resume</a></li>
+        <li><a ui-sref="about" onclick="test()"><i class='fa fa-user fa-fw'></i> About</a></li>
+        <li><a ui-sref="cv"><i class='fa fa-file-text fa-fw'></i> Resume</a></li>
         <li><a href="http://blog.thelittletechie.com/p/portfolio.html#tlt" ng-click="reload()"><i class='fa fa-archive fa-fw'></i> Portfolio</a></li>
         <li><a ui-sref="contact" ng-click="reload()"><i class='fa fa-envelope fa-fw'></i> Contact</a></li>
 			</ul>
@@ -77,50 +77,52 @@
       <div class="tlt-mobile-cover"></div>
     </div>
 
-    <div id="tlt" style="height: 50px"></div>
-    <div class="container">
-      <div ui-view></div>
-       <footer>
-        <p>                
-          <a href='https://twitter.com/vivinantony'>
-            <span class='fa-stack fa-2x'>
-              <i class='fa fa-circle fa-stack-2x social-twitter'></i>
-              <i class='fa fa-twitter fa-stack-1x social-icons'></i>
-            </span>
-          </a>
-          <a href='https://www.facebook.com/TheLittleTechie'>
-            <span class='fa-stack fa-2x'>
-              <i class='fa fa-circle fa-stack-2x social-facebook'></i>
-              <i class='fa fa-facebook fa-stack-1x social-icons'></i>
-            </span>
-          </a>
-          <a href='https://plus.google.com/104070651474939118104' rel='publisher'>
-            <span class='fa-stack fa-2x'>
-              <i class='fa fa-circle fa-stack-2x social-googleplus'></i>
-              <i class='fa fa-google-plus fa-stack-1x social-icons'></i>
-            </span>
-          </a>        
-          <a href='https://www.linkedin.com/in/vivinantony'>
-            <span class='fa-stack fa-2x'>
-              <i class='fa fa-circle fa-stack-2x social-linkedin'></i>
-              <i class='fa fa-linkedin fa-stack-1x social-icons'></i>
-            </span>
-          </a>
-          <a href='http://codepen.io/vivinantony/'>
-            <span class='fa-stack fa-2x'>
-              <i class='fa fa-circle fa-stack-2x social-codepen'></i>
-              <i class='fa fa-codepen fa-stack-1x social-icons'></i>
-            </span>
-          </a>
-        </p>
-        <p>
-          <i class='fa fa-copyright'></i> Copyright 2013-2017<br />
-          Designed and built by <a href='https://twitter.com/vivinantony'>@Vivin</a> with all the <i class='fa fa-heart'></i> in the world.</i>
-        </p>
-        <p>
-          <a ui-sref='apps' ng-click="reload()">Apps</a> &#8226; <a href="http://blog.thelittletechie.com/p/privacy-policy.html#tlt">Privacy</a> &#8226; <a href="http://blog.thelittletechie.com/p/copyright-policy.html#tlt">Copyright</a>
-        </p>
-      </footer>
+    <div class="testt">
+      <div id="tlt" style="height: 50px"></div>
+      <div class="container">
+        <div ui-view></div>
+        <footer>
+          <p>                
+            <a href='https://twitter.com/vivinantony'>
+              <span class='fa-stack fa-2x'>
+                <i class='fa fa-circle fa-stack-2x social-twitter'></i>
+                <i class='fa fa-twitter fa-stack-1x social-icons'></i>
+              </span>
+            </a>
+            <a href='https://www.facebook.com/TheLittleTechie'>
+              <span class='fa-stack fa-2x'>
+                <i class='fa fa-circle fa-stack-2x social-facebook'></i>
+                <i class='fa fa-facebook fa-stack-1x social-icons'></i>
+              </span>
+            </a>
+            <a href='https://plus.google.com/104070651474939118104' rel='publisher'>
+              <span class='fa-stack fa-2x'>
+                <i class='fa fa-circle fa-stack-2x social-googleplus'></i>
+                <i class='fa fa-google-plus fa-stack-1x social-icons'></i>
+              </span>
+            </a>        
+            <a href='https://www.linkedin.com/in/vivinantony'>
+              <span class='fa-stack fa-2x'>
+                <i class='fa fa-circle fa-stack-2x social-linkedin'></i>
+                <i class='fa fa-linkedin fa-stack-1x social-icons'></i>
+              </span>
+            </a>
+            <a href='http://codepen.io/vivinantony/'>
+              <span class='fa-stack fa-2x'>
+                <i class='fa fa-circle fa-stack-2x social-codepen'></i>
+                <i class='fa fa-codepen fa-stack-1x social-icons'></i>
+              </span>
+            </a>
+          </p>
+          <p>
+            <i class='fa fa-copyright'></i> Copyright 2013-2017<br />
+            Designed and built by <a href='https://twitter.com/vivinantony'>@Vivin</a> with all the <i class='fa fa-heart'></i> in the world.</i>
+          </p>
+          <p>
+            <a ui-sref='apps' ng-click="reload()">Apps</a> &#8226; <a href="http://blog.thelittletechie.com/p/privacy-policy.html#tlt">Privacy</a> &#8226; <a href="http://blog.thelittletechie.com/p/copyright-policy.html#tlt">Copyright</a>
+          </p>
+        </footer>
+      </div>
     </div>
 
   </div>
