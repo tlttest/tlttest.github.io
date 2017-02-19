@@ -58123,16 +58123,31 @@ app.controller('CommonCtrl', ['$scope', '$rootScope', '$state', '$timeout', '$an
     }, 1000);
   };
 
-  $scope.test = function(el) {
+  $scope.route = function(el) {
     console.log($state.current.name);
-    if(el == 'about') {
-      window.location.href = '/#!/about';
-      window.location.reload();
-    } else if(el == 'home') {
+    if(el == 'home') {
       window.location.href = '/#!/';
+      window.location.reload();
+    } else if(el == 'about') {
+      window.location.href = '/#!/about';
       window.location.reload();
     } else if(el == 'cv') {
       window.location.href = '/#!/cv';
+      window.location.reload();
+    } else if(el == 'portfolio') {
+      window.location.href = '/#!/portfolio';
+      window.location.reload();
+    } else if(el == 'contact') {
+      window.location.href = '/#!/contact';
+      window.location.reload();
+    } else if(el == 'apps') {
+      window.location.href = '/#!/apps';
+      window.location.reload();
+    } else if(el == 'privacy') {
+      window.location.href = '/#!/privacy';
+      window.location.reload();
+    } else if(el == 'copyright') {
+      window.location.href = '/#!/copyright';
       window.location.reload();
     }
   };

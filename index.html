@@ -38,15 +38,15 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" ng-click="test('home')"><img src='./img/tlt-header.png' /></a>
+			<a class="navbar-brand" ng-click="route('home')"><img src='./img/tlt-header.png' /></a>
 		</div>
 		<div class="collapse navbar-collapse" uib-collapse="!isNavCollapsed">
 			<ul class="nav navbar-nav" ng-click="isNavCollapsed = false">
 			  <li><a href='http://blog.thelittletechie.com'><i class='fa fa-code fa-fw'></i> Blog</a></li>
-        <li><a ng-click="test('about')"><i class='fa fa-user fa-fw'></i> About</a></li>
-        <li><a ng-click="test('cv')"><i class='fa fa-file-text fa-fw'></i> Resume</a></li>
-        <li><a href="http://blog.thelittletechie.com/p/portfolio.html#tlt" ng-click="reload()"><i class='fa fa-archive fa-fw'></i> Portfolio</a></li>
-        <li><a ui-sref="contact" ng-click="reload()"><i class='fa fa-envelope fa-fw'></i> Contact</a></li>
+        <li><a ng-click="route('about')"><i class='fa fa-user fa-fw'></i> About</a></li>
+        <li><a ng-click="route('cv')"><i class='fa fa-file-text fa-fw'></i> Resume</a></li>
+        <li><a ng-click="route('portfolio')"><i class='fa fa-archive fa-fw'></i> Portfolio</a></li>
+        <li><a ng-click="route('contact')"><i class='fa fa-envelope fa-fw'></i> Contact</a></li>
 			</ul>
       <ul class="nav navbar-nav pull-right navbar-social">
 			  <li><a href='https://twitter.com/vivinantony'><i class='fa fa-twitter fa-fw'></i></a></li>
@@ -68,7 +68,6 @@
   <div class="loading">
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
   </div>
-  <div class="cover"></div>
 
   <script src="js/app.js"></script>
 </body>
