@@ -65,8 +65,9 @@
 
   <div id="tlt" style="height: 50px"></div>
   <div ui-view></div>
-  <div ng-include="'./views/footer.html'" ng-hide="$state.current.name === 'home'"></div>
-
+  <div class="loading">
+    <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+  </div>
 
   <script src="js/app.js"></script>
 </body>
