@@ -3,8 +3,42 @@
     <div class="col-md-12">
       <h3 class="title">Portfolio</h3>
       <hr/>
+
+      <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="folio in apps" ng-click="$ctrl.open('lg'); folio(folio.id)">
+          <div class="thumbnail">
+            <div class="thumbnail-container">
+              <img ng-src="{{folio.thumbnail}}" alt="{{folio.title}}">
+            </div>
+            <div class="caption">
+              <h4>{{folio.title}}</h4>
+              <p>{{folio.os}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-   <div ng-include="'./views/footer.html'"></div>
+  <script type="text/ng-template" id="folioViewModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">{{folio.title}}</h3>
+    </div>
+    <div class="modal-body">
+      <p ng-repeat="item in appView.screenshots">
+        <img ng-src="{{item.url}}" />
+      </p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.view()">View</button>
+        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+    </div>
+  </script>
+
+  <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
+  <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>
+  <button type="button" class="btn btn-default" ng-click="$ctrl.open('sm')">Small modal</button>
+
+  <div ng-include="'./views/footer.html'"></div>
 </div>

@@ -3,8 +3,32 @@
     <div class="col-md-12">
       <h3 class="title">Apps</h3>
       <hr/>
+
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+        <input type="text" class="form-control" placeholder="Apps..." ng-model="search">
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <a ng-repeat="app in apps | filter: search" ng-href="{{app.url}}">
+          <div class="col-sm-4 col-md-3">
+            <div class="thumbnail">
+              <div class="thumbnail-container">
+                <img ng-src="{{app.thumbnail}}" alt="{{app.title}}">
+              </div>
+              <div class="caption">
+                <h4>{{app.title}}</h4>
+                <p>{{app.os}}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
   </div>
 
-   <div ng-include="'./views/footer.html'"></div>
+  <div ng-include="'./views/footer.html'"></div>
 </div>
