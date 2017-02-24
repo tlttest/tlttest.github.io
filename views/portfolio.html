@@ -1,21 +1,48 @@
 <div class="container page portfolio-page">
-  <div class="row panel">
+  <div class="row">
     <div class="col-md-12">
       <h3 class="title">Portfolio</h3>
       <hr/>
 
       <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="folio in apps" ng-click="$ctrl.open('lg'); folio(folio.id)">
-          <div class="thumbnail">
-            <div class="thumbnail-container">
-              <img ng-src="{{folio.thumbnail}}" alt="{{folio.title}}">
+        <div class="col-md-12">
+          <div class="input-group">
+            <div class="input-group-btn" uib-dropdown>
+              <button id="sort-button" class="btn btn-default dropdown-toggle" uib-dropdown-toggle ng-disabled="disabled"> 
+                Sort by <span class="caret"></span>
+              </button>
+              <button type="button" class="btn btn-default" ng-disabled="disabled"><i class="fa fa-search"></i></button>
+              <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="sort-button">
+                <li role="menuitem">
+                  <a ng-click="sort('title')">
+                    Name
+                    <span ng-show="sortBy == 'title'" class="fa" ng-class="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="caption">
-              <h4>{{folio.title}}</h4>
-              <p>{{folio.os}}</p>
-            </div>
+            <input type="text" class="form-control" placeholder="Portfolio..." ng-model="search">
           </div>
         </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <p ng-show="folio.length == 0">No portfolio added yet!</p>
+        <a ng-repeat="folio in folios | filter: search | orderBy:sortBy:sortReverse" ng-click="$ctrl.open('lg'); folioView(folio.id)">
+          <div class="col-sm-6 col-md-4 animated zoomIn">
+            <div class="thumbnail">
+              <div class="thumbnail-container">
+                <img ng-src="{{folio.thumbnail}}" alt="{{folio.title}}">
+              </div>
+              <div class="caption">
+                <h4>{{folio.title}}</h4>
+                <p>{{folio.type}}</p>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -24,21 +51,18 @@
   <script type="text/ng-template" id="folioViewModal.html">
     <div class="modal-header">
         <h3 class="modal-title">{{folio.title}}</h3>
+        <button class="close" ng-click="$ctrl.cancel()"><i class="fa fa-times"></i></button>
     </div>
     <div class="modal-body">
-      <p ng-repeat="item in appView.screenshots">
+      <p ng-repeat="item in folio.screenshots">
         <img ng-src="{{item.url}}" />
       </p>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="$ctrl.view()">View</button>
-        <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+        <a class="btn btn-primary" ng-href="{{folio.url}}" target="_blank" ng-show="folio.url != null"><i class="fa fa-eye"></i> View</a>
+        <button class="btn btn-warning" ng-click="$ctrl.cancel()">Cancel</button>
     </div>
   </script>
-
-  <button type="button" class="btn btn-default" ng-click="$ctrl.open()">Open me!</button>
-  <button type="button" class="btn btn-default" ng-click="$ctrl.open('lg')">Large modal</button>
-  <button type="button" class="btn btn-default" ng-click="$ctrl.open('sm')">Small modal</button>
 
   <div ng-include="'./views/footer.html'"></div>
 </div>

@@ -58484,6 +58484,14 @@ app.controller('AppsCtrl', ['$scope', '$http',  function($scope, $http) {
    $http.get("./json/apps.json").then(function(res) {
      $scope.apps = res.data;
    });
+
+  $scope.sortBy = 'title';
+  $scope.sortReverse = false;
+  $scope.sort = function(by) {
+    $scope.sortBy = by;
+    $scope.sortReverse = !$scope.sortReverse
+  };
+
 }]);
 app.controller('CommonCtrl', ['$scope', function($scope) {
    $scope.scrollTo = function (id) {
@@ -58503,9 +58511,15 @@ app.controller('CommonCtrl', ['$scope', function($scope) {
   };
 }]);
 app.controller('PortfolioCtrl', ['$scope', '$rootScope', '$http', '$uibModal',  function($scope, $rootScope, $http, $uibModal) {
-   $http.get("./json/apps.json").then(function(res) {
+   $http.get("./json/portfolio.json").then(function(res) {
      $scope.folios = res.data;
    });
+
+  $scope.sortReverse = false;
+  $scope.sort = function(by) {
+    $scope.sortBy = by;
+    $scope.sortReverse = !$scope.sortReverse
+  };
 
   var $ctrl = this;
   $ctrl.animationsEnabled = true;
@@ -58521,8 +58535,8 @@ app.controller('PortfolioCtrl', ['$scope', '$rootScope', '$http', '$uibModal',  
     });
   };
 
-  $scope.folio = function(id) {
-    angular.forEach($scope.apps, function(val) {
+  $scope.folioView = function(id) {
+    angular.forEach($scope.folios, function(val) {
       if(id == val.id) {
         $rootScope.folio = val;
       }
