@@ -58133,7 +58133,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         .state('cv', {
             url: "/cv",
             templateUrl: "views/cv.html",
-            controller: "CommonCtrl"
+            controller: "CvCtrl"
         })
         .state('portfolio', {
             url: "/portfolio",
@@ -58509,6 +58509,19 @@ app.controller('CommonCtrl', ['$scope', function($scope) {
       window.location.reload();
     }
   };
+}]);
+app.controller('CvCtrl', ['$scope', '$http', function ($scope, $http) {
+  $http.get("./json/skills.json").then(function (res) {
+    $scope.skills = res.data;
+  });
+
+  $http.get("./json/education.json").then(function (res) {
+    $scope.educations = res.data;
+  });
+
+  $http.get("./json/experience.json").then(function (res) {
+    $scope.experiences = res.data;
+  });
 }]);
 app.controller('PortfolioCtrl', ['$scope', '$rootScope', '$http', '$uibModal',  function($scope, $rootScope, $http, $uibModal) {
    $http.get("./json/portfolio.json").then(function(res) {
