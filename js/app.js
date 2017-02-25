@@ -58162,6 +58162,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         })
 }]);
 
+app.run(['$rootScope', '$anchorScroll', function($rootScope, $anchorScroll){
+    $rootScope.$on('$stateChangeStart', function() {
+        $anchorScroll('tlt');
+    });
+}]);
+
 window.touchCheck = function () {
 	return Modernizr.touch;
 }
@@ -58509,6 +58515,7 @@ app.controller('CommonCtrl', ['$scope', function($scope) {
       window.location.reload();
     }
   };
+
 }]);
 app.controller('CvCtrl', ['$scope', '$http', function ($scope, $http) {
   $http.get("./json/skills.json").then(function (res) {

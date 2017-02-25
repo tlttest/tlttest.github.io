@@ -59,12 +59,11 @@
 	</nav>
 
   <div>
-    <a class='chev-up' ng-click="scrollTo('home')"><i class='fa fa-chevron-circle-up fa-2x'></i></a>
-    <a class='chev-down' ng-click="scrollTo('tlt')"><i class='fa fa-chevron-circle-down fa-2x'></i></a>
+    <a class='chev-up' ng-click="scrollTo('tlt')"><i class='fa fa-chevron-circle-up fa-2x'></i></a>
   </div>
 
   <div id="tlt" style="height: 50px"></div>
-  <div ui-view autoscroll="true"></div>
+  <div ui-view></div>
   <div class="loading">
     <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
   </div>
