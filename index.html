@@ -46,7 +46,9 @@
 
   <div class="menu-overlay" ng-show="navFlag">
     <ul>
-      <li class="animated slideInLeft" ng-repeat="nav in navs" ui-sref="{{nav.url}}" ng-click="navClose()">{{nav.name}}</li>
+      <li class="animated slideInLeft" ng-repeat="nav in navs" ui-sref="{{nav.url}}" ng-click="navClose()">
+        <a ng-href="{{nav.href}}">{{nav.name}}</a>
+      </li>
     </ul>
   </div>
 

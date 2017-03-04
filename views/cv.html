@@ -1,4 +1,94 @@
-<div class="page page-cv">
-  <h1>CV</h1>
+<div class="full-page">
+  <div class="page page-cv">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row animated slideInLeft">
+            <div class="col-md-4 col-md-push-8 text-center">
+              <img height="200" width="200" src="./img/about/avatar.png" class='image-spin' />
+            </div>
+            <div class="col-md-8 col-md-pull-4 text-center">
+              <h2>VIVIN ANTONY</h2>
+              <p><strong>HTML5, CSS3 and Web/Mobile Developer of 4.6 Years of Experience</strong></p>
+              <p>I am an effective team player, known for creativity, flexibility and sense of humour. Perseverance and smart
+                work are my major strengths.</p>
+              <p><em>"Learning AngularJS in depth"</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row animated slideInRight">
+        <div class="col-md-3 text-center">
+          <i class="fa fa-map-marker fa-3x"></i>
+          <h4><strong>Chennai</strong></h4>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="fa fa-whatsapp fa-3x"></i>
+          <h4><strong>8428401965</strong></h4>
+        </div>
+        <div class="col-md-6 text-center">
+          <i class="fa fa-envelope fa-3x"></i>
+          <h4><strong>thelittletechie@gmail.com</strong></h4>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row skills animated slideInLeft">
+        <div class="col-md-12">
+          <h4 class="title">SKILLS</h4>
+        </div>
+        <!--<div class="col-md-12" ng-repeat="skill in skills">
+          <uib-progressbar class="progress-striped active" value="skill.value">{{skill.name}}</uib-progressbar>
+        </div>-->
+        <div class="col-md-12">
+          <h2 ng-repeat="skill in skills"><span class="label label-{{skill.color}}">{{skill.name}}</span></h2>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row animated slideInRight">
+        <div class="col-md-12">
+          <h4 class="title">EDUCATION</h4>
+        </div>
+        <div class="col-md-12">
+          <p ng-repeat="edu in educations">{{edu.degree}} from {{edu.where}}, {{edu.place}}, in {{edu.year}} - {{edu.mark}}%.</p>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row experience animated slideInLeft">
+        <div class="col-md-12">
+          <h4 class="title">PROFESSIONAL EXPERIENCE</h4>
+        </div>
+        <div class="col-md-12" ng-repeat="exp in experiences">
+          <h4><strong><i class="fa fa-hand-o-right"></i> {{exp.company}} (<a ng-href="{{exp.url}}" target="_blank">{{exp.url}}</a>) • {{exp.place}} • {{exp.fromDate}} - {{exp.toDate}}</strong></h4>
+          <p ng-hide="exp.designation == null"><strong>Designation:</strong> {{exp.designation}}</p>
+          <p ng-hide="exp.teamSize == null"><strong>Team Size:</strong> {{exp.teamSize}}</p>
+          <p ng-hide="exp.environment == null"><strong>Environment:</strong> {{exp.environment}}</p>
+          <p ng-hide="exp.description == null">{{exp.description}}</p>
+          <p>
+            <ul class="list-group">
+              <li class="list-group-item" ng-repeat="ul in exp.myRole">{{ul.li}}</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="row animated slideInRight">
+        <div class="col-md-12">
+          <p>Please check out my <a ui-sref="portfolio">portfolio</a> for my other works.</p>
+          <p>I am available for freelancing, please feel free to <a ui-sref="contact">contact</a> me.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <div ng-include="'./views/footer.html'"></div>
 </div>

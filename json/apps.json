@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "title": "Best Wishes",
+    "os": "android",
+    "thumbnail": "./img/apps/thumb-best-wishes.png",
+    "url": "https://play.google.com/store/apps/details?id=com.thelittletechie.bestwishes"
+  }, {
+    "id": 2,
+    "title": "Secret Santa",
+    "os": "android",
+    "thumbnail": "./img/apps/thumb-secret-santa.png",
+    "url": "https://play.google.com/store/apps/details?id=com.thelittletechie.secretsanta"
+  }
+]
