@@ -9,8 +9,12 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>T E C H I E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta content='blogging, html, html5, css, css3, javascript, jquery, sql, nodejs, angularjs, bootstrap, fontawesome, coding, programming, programmer, the little techie, little techie, thelittletechie, ad free website, responsive, responsive webdesign, responsive blog, with example, with demo' name='keywords'/>
+  <meta content='Vivin Antony' name='author'/>
+  <meta content='#3B305F' name='theme-color'/>
+
+  <title>T E C H I E</title>
 
   <link rel="icon" href="img/favicon.png" />
   <link media="all" type="text/css" rel="stylesheet" href="css/app.min.css" />
@@ -46,9 +50,12 @@
 
   <div class="menu-overlay" ng-show="navFlag">
     <ul>
-      <li class="animated slideInLeft" ng-repeat="nav in navs" ui-sref="{{nav.url}}" ng-click="navClose()">
-        <a ng-href="{{nav.href}}">{{nav.name}}</a>
-      </li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a ui-sref="home">home</a></li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a href="http://blog.thelittletechie.com">blog</a></li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a ui-sref="about">about</a></li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a ui-sref="cv">cv</a></li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a ui-sref="portfolio">portfolio</a></li>
+      <li class="animated slideInLeft" ng-click="navClose()"><a ui-sref="contact">contact</a></li>
     </ul>
   </div>
 
