@@ -1,0 +1,22 @@
+@import '../../../assets/styles/variables.scss';
+
+.page-portfolio {
+    a {
+        color: $primary;
+        text-decoration: none;
+        &:hover {
+            color: $secondary;
+        }
+    }
+    .thumbnail-container {
+        height: 200px;
+        overflow: hidden;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .thumbs {
+        margin-bottom: 30px;
+    }
+}

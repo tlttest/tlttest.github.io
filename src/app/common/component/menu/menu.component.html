@@ -1,0 +1,16 @@
+<nav>
+  <div class="hamburger" [ngClass]="navFlag ? 'active' : ''" (click)="navFlag = !navFlag">
+    <span class="top"></span>
+    <span class="middle"></span>
+    <span class="bottom"></span>
+  </div>
+</nav>
+
+<div class="menu-overlay" *ngIf="navFlag">
+  <ul [@flyIn]="menus.length">
+    <li (click)="navClose()" *ngFor="let menu of menus"> 
+      <a routerLink="{{menu.route}}" *ngIf="menu.flag">{{menu.page}}</a>
+      <a href="{{menu.url}}" *ngIf="!menu.flag">{{menu.page}}</a>
+    </li>
+  </ul>  
+</div>

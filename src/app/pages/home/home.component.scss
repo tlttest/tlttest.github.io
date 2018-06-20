@@ -1,0 +1,18 @@
+@import '../../../assets/styles/variables.scss';
+
+.page-home {
+    h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        a {
+            color: $primary;
+            font-family: 'impact', sans-serif;
+            font-size: 10vw;
+            text-transform: uppercase;
+        }
+    }
+    .quote {
+        text-align: center;
+        margin-top: 50px;
+    }
+}

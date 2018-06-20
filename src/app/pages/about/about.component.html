@@ -1,0 +1,58 @@
+<div class="full-page">
+  <div class="page page-about">
+    <div class="container">
+      <div class='row'>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img height="200" width="200" src="{{label.img1}}" class="avatar" />
+            </div>
+            <div class="col-md-8 text-center">
+              <h2 class="title">{{label.title}}</h2>
+              <p>{{label.version}}</p>
+              <p>
+                <strong>{{label.quote1}}</strong>
+              </p>
+              <p [innerHTML]="label.desc1"></p>
+            </div>
+          </div>
+
+          <hr/>
+
+          <div class="row">
+            <div class="col-md-4 order-md-8 text-center">
+              <img height="200" width="200" src="{{label.img2}}" class="avatar" />
+            </div>
+            <div class="col-md-8 order-md-4 text-center">
+              <h2 class="title">{{label.name}}</h2>
+              <p>
+                <a href="{{urlLabel.twitter}}">{{label.twitterHandler}}</a>
+              </p>
+              <p>
+                <strong>{{label.quote2}}</strong>
+              </p>
+              <p>{{label.desc2}}</p>
+              <p>
+                <em>"{{label.quote3}}"</em>
+              </p>
+            </div>
+          </div>
+
+          <hr/>
+
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img width="200" src="{{label.img3}}" class="avatar" />
+            </div>
+            <div class="col-md-8 text-center">
+              <p>{{label.text1}}</p>
+              <p>{{label.text2}}</p>
+              <p>{{label.text3}}</p>
+              <p>{{label.text4}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

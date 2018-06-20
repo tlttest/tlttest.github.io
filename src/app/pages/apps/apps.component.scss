@@ -1,0 +1,11 @@
+@import '../../../assets/styles/variables.scss';
+
+.page-apps {
+    a {
+        color: $primary;
+        text-decoration: none;
+        &:hover {
+            color: $secondary;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<div class="full-page">
+  <div class="page page-apps" *ngIf="label">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <div class="dropdown show">
+                <a class="btn btn-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  {{label.sortBy}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" (click)="sort('title')">{{label.name}}
+                    <span *ngIf="sortBy == 'title'" class="fa" [ngClass]="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+                  </a>
+                  <a class="dropdown-item" (click)="sort('os')">{{label.os}}
+                    <span *ngIf="sortBy == 'os'" class="fa" [ngClass]="sortReverse ? 'fa-caret-up' : 'fa-caret-down'"></span>
+                  </a>
+                </div>
+              </div>
+              <span class="input-group-text">
+                <i class="fa fa-search"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Apps..."
+              [(ngModel)]="search">
+            <div class="input-group-append">
+              <button class="btn btn-light" type="button" (click)="search = ''">
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="row">
+        <div class="col-sm-4 col-md-3" *ngFor="let app of apps">
+          <a href="{{app.url}}">
+            <div class="card">
+              <img class="card-img-top" src="{{app.thumbnail}}" alt="{{app.title}}">
+              <div class="card-body">
+                <h5 class="card-title">{{app.title}}</h5>
+                <p class="card-text">
+                  <i class="fa fa-android" *ngIf="app.os == 'android'"></i>
+                  <i class="fa fa-apple" *ngIf="app.os == 'ios'"></i>
+                  {{app.os}}
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

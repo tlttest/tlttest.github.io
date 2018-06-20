@@ -1,0 +1,11 @@
+<app-spinner></app-spinner>
+
+<app-menu></app-menu>
+
+<app-canvas></app-canvas>
+
+<div class="outer-wrapper">
+    <router-outlet (activate)="onRouting($event)"></router-outlet>
+
+    <app-footer></app-footer>
+</div>

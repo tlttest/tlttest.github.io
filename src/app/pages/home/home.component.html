@@ -1,0 +1,32 @@
+<div class="full-page">
+  <app-alert msg="{{errMsg}}" *ngIf="errMsgFlag"></app-alert>
+  <div class="page page-home" *ngIf="label && urlLabel && menuLabel">
+    <div class="container">
+      <div class='row'>
+        <div class="col">
+          <h1>
+            <a href="{{urlLabel.twitter}}">{{label.title}}</a>
+          </h1>
+          <p>{{label.text1}}
+            <a href="{{urlLabel.art}}">{{menuLabel.art}}</a>.</p>
+          <p>{{label.text2}}
+            <a routerLink="portfolio">{{menuLabel.portfolio}}</a> {{label.text3}}
+            <a routerLink="contact">{{menuLabel.contact}}</a> {{label.text4}}</p>
+          <p>{{label.text5}}
+            <a href="{{urlLabel.blog}}">{{menuLabel.blog}}</a> {{label.text6}}</p>
+          <p>{{label.text7}}
+            <a routerLink="cv">{{menuLabel.cv}}</a>{{label.text8}}</p>
+          <p class="quote">
+            <em>
+              <strong>{{label.text9}}
+                <a routerLink="contact">{{menuLabel.contact}}</a> {{label.text10}}</strong>
+            </em>
+          </p>
+          <p style="margin-top: 30px; opacity: 0.5">
+            <small>{{label.text11}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
