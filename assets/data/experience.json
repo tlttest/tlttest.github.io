@@ -1,0 +1,79 @@
+[
+  {
+    "company": "Infosys Limited",
+    "url": "http://www.infosys.com/",
+    "place": "Chennai",
+    "fromDate": "1 July 2017",
+    "toDate": "Till Date",
+    "designation": "Technology Analyst",
+    "teamSize": null,
+    "environment": null,
+    "description": null,
+    "myRole": null
+  },
+  {
+    "company": "Infosys Limited",
+    "url": "http://www.infosys.com/",
+    "place": "Chennai",
+    "fromDate": "6 July 2015",
+    "toDate": "30 June 2017",
+    "designation": "Senior Software Engineer",
+    "teamSize": null,
+    "environment": null,
+    "description": null,
+    "myRole": null
+  }, {
+    "company": "PoolCircle Technologies Private Limited",
+    "url": "http://www.poolcircle.com/",
+    "place": "Bangalore",
+    "fromDate": "5 May 2014",
+    "toDate": "11 June 2015",
+    "designation": "Software Engineer",
+    "teamSize": 2,
+    "environment": "HTML, CSS, JavaScript, Bootstrap, JSP",
+    "description": "PoolCircle is a technology product start-up focused on the ridesharing space with a strong emphasis on safety. PoolCircle allows people to share rides with other people they trust. A user can sign up in the platform, publish a ride and find other people with whom he can commute. User can build his own circle of trust by adding his social connections.",
+    "myRole": [
+      {"li": "Heavily involved in product design and user experience flows for web and app (IOS & Android)."},
+      {"li": "Extensive experience in designing web application from ground up."},
+      {"li": "Was responsible for entire web development and handled end to end web application."},
+      {"li": "Analysis on design patterns and colour concept for the website and user interaction."},
+      {"li": "Developed a responsive design that works on cross browsers and multiple devices."},
+      {"li": "Was responsible for all the marketing ad creativity and fb promotions."},
+      {"li": "The user base grew 10X during my tenure."},
+      {"li": "Involved in server side deployment and testing the app and the web."}
+    ] 
+  }, {
+    "company": "Edon Technologies Private Limited",
+    "url": "http://www.edon.in/",
+    "place": "Chennai",
+    "fromDate": "6 Oct 2013",
+    "toDate": "25 April 2014",
+    "designation": "Software Engineer",
+    "teamSize": 3,
+    "environment": "HTML5, CSS3, JavaScript, jQuery",
+    "description": "Edon is a complete Software Solutions provider for various Educational Institutions. It is a start-up based product involved in e-learning technology.",
+    "myRole": [
+      {"li": "Involved in planning the design and its User Experience."},
+      {"li": "Converted the design into Web Pages using HTML, CSS and JavaScipt"},
+      {"li": "Played a vital role between development and design."},
+      {"li": "Involved in writing HTML, CSS and JavaScript for cross browsers."}
+    ] 
+  }, {
+    "company": "Hypertrix Infolabs Private Limited",
+    "url": "http://www.hypertrix.com/",
+    "place": "Chennai",
+    "fromDate": "1 Oct 2012",
+    "toDate": "8 October 2013",
+    "designation": "Junior Programmer",
+    "teamSize": 3,
+    "environment": "HTML, CSS, JavaScript, ASP.Net, SQL",
+    "description": "The project is 'Archetype Portal' which deals with online gaming portal wherein users subscribe and play tournaments.",
+    "myRole": [
+      {"li": "Was involved in designing Photoshop based screen of the main portal and converting them to html page."},
+      {"li": "Involved in writing HTML, CSS and JavaScript for cross browsers."},
+      {"li": "Was involved to research on 3rd party components and implement in the application."},
+      {"li": "Involved in Admin Portal backend for moderation of the site and updating news and forums."},
+      {"li": "Involved in SQL-Lite for database management."}
+    ] 
+  }
+]

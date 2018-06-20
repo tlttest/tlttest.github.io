@@ -1,0 +1,75 @@
+[
+  {
+    "name": "HTML5",
+    "value": 90,
+    "color": "primary"
+  }, {
+    "name": "CSS3",
+    "value": 95,
+    "color": "success"
+  }, {
+    "name": "JavaScript",
+    "value": 65,
+    "color": "info"
+  }, {
+    "name": "Bootstrap",
+    "value": 95,
+    "color": "warning"
+  }, {
+    "name": "Angular 1",
+    "value": 80,
+    "color": "danger"
+  }, {
+    "name": "Angular 2",
+    "value": 40,
+    "color": "primary"
+  }, {
+    "name": "Ionic 1",
+    "value": 95,
+    "color": "success"
+  }, {
+    "name": "Ionic 2",
+    "value": 40,
+    "color": "info"
+  }, {
+    "name": "Cordova",
+    "value": 60,
+    "color": "warning"
+  }, {
+    "name": "SASS",
+    "value": 95,
+    "color": "danger"
+  }, {
+    "name": "Mongo DB",
+    "value": 70,
+    "color": "primary"
+  }, {
+    "name": "MEAN Stack",
+    "value": 60,
+    "color": "success"
+  }, {
+    "name": "jQuery",
+    "value": 80,
+    "color": "info"
+  }, {
+    "name": "Gulp",
+    "value": 80,
+    "color": "warning"
+  }, {
+    "name": "Jade",
+    "value": 50,
+    "color": "danger"
+  }, {
+    "name": "Git",
+    "value": 95,
+    "color": "primary"
+  }, {
+    "name": "Ember JS",
+    "value": 40,
+    "color": "success"
+  }, {
+    "name": "Jiira",
+    "value": 85,
+    "color": "info"
+  }
+]
